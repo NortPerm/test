@@ -154,15 +154,15 @@ function Manager_F() {
 
 
     this.lockScreen = function () {
-        $('#ajaxoverlay').fadeIn(400);
+        $('#ajaxoverlay').fadeIn(40);
     }
 
     this.unlockScreen = function () {
-        $('#ajaxoverlay').fadeOut(400);
+        $('#ajaxoverlay').fadeOut(40);
     }
 
     this.openModal = function (tar) { //#modal
-        $('#overlay').fadeIn(400,
+        $('#overlay').fadeIn(40,
                 function () {
                     $(tar).css('display', 'block')
                             .animate({opacity: 1, top: '50%'}, 200);
@@ -173,7 +173,7 @@ function Manager_F() {
         $(tar).animate({opacity: 0, top: '45%'}, 200,
                 function () {
                     $(this).css('display', 'none');
-                    $('#overlay').fadeOut(400);
+                    $('#overlay').fadeOut(40);
                 }
         );
     }
