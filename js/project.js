@@ -16,11 +16,11 @@ function Manager_F() {
         data.action = action;
         MyManager.lockScreen();
         $.ajax({
-            url: "index.php", //url страницы (action_ajax_form.php)
-            type: "POST", //метод отправки
-            dataType: "html", //формат данных
+            url: "index.php", 
+            type: "POST", 
+            dataType: "html", 
             data: data,
-            success: function (html) { //Данные отправлены успешно
+            success: function (html) { 
                 if (tar) {
                     $('#' + tar).html(html);
                 }
@@ -29,7 +29,7 @@ function Manager_F() {
                     callback(html);
                 }
             },
-            error: function (response) { // Данные не отправлены
+            error: function (response) { 
                 alert('Ошибка. Данные не отправлены.');
                 MyManager.unlockScreen();
             }
